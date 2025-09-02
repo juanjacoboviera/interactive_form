@@ -1,0 +1,97 @@
+[
+    {
+        "id": 0,
+        "type": "contactInfo",
+        "title": "Tell us a little about yourself",
+        "image": "",
+        "parragraph": "lorem ipsum...",
+        "contactFields": [
+            {
+                "inputName": "firstName",
+                "type": "inputText",
+                "title": "First Name"
+            },
+            {
+                "inputName": "lastName",
+                "type": "inputText",
+                "title": "Last Name"
+            },
+            {
+                "inputName": "phoneNumber",
+                "type": "inputNumber",
+                "title": "Phone Number"
+            },
+            {
+                "inputName": "email",
+                "type": "inputText",
+                "title": "Email"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "type": "inputRadio",
+        "options": [
+            "Master Card Gold",
+            "Master Card Platinum",
+            "Master Card Bronze"
+        ],
+        "title": "What type of credit card are you interested in?",
+        "image": "",
+        "parragraph": "lorem ipsum...",
+        "inputName": "jobTitle"
+    },
+    {
+        "id": 2,
+        "type": "inputRadio",
+        "options": [
+            "High school",
+            "Bachelor of arts",
+            "Master"
+        ],
+        "title": "Highest level of education completed?",
+        "image": "",
+        "parragraph": "lorem ipsum...",
+        "inputName": "jobTitle"
+    },
+    {
+        "id": 3,
+        "type": "inputRadio",
+        "options": [
+            "Yes",
+            "No"
+        ],
+        "title": "Are you currently employed?",
+        "image": "",
+        "parragraph": "lorem ipsum...",
+        "inputName": "jobTitle"
+    },
+    {
+        "id": 4,
+        "type": "inputText",
+        "title": "Please specify your current job title?",
+        "image": "",
+        "parragraph": "lorem ipsum...",
+        "inputName": "jobTitle"
+    },
+    {
+        "id": 5,
+        "type": "inputSlider",
+        "title": "Please specify your estimate monthly income?",
+        "image": "",
+        "parragraph": "lorem ipsum...",
+        "inputName": "monthlyIncome"
+    },
+    {
+        "id": 6,
+        "type": "inputRadio",
+        "options": [
+            "Phone",
+            "Text Message",
+            "Email"
+        ],
+        "title": "What's your preffered method of contact?",
+        "image": "",
+        "parragraph": "lorem ipsum..."
+    }
+]
