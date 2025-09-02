@@ -13,6 +13,7 @@ const SlideContainer = () => {
       email: "",
       creditCardType: "",
       education: "",
+      employed: "",
       jobTitle: "",
       monthlyIncome: [
             20,
@@ -25,6 +26,7 @@ const SlideContainer = () => {
     <div>
         <form onSubmit={handleSubmit((data) => console.log(data))} action="submit">
             <SlideTemplate question={questions[currentIndex]} form={{control, handleSubmit, getValues, setValue, watch}}/>
+            <button onClick={()=> setCurrentIndex(currentIndex + 1)}>Next</button>
             <button type='submit'>Check Values</button>
         </form>
     </div>

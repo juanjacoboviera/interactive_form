@@ -26,11 +26,11 @@ export const questionComponents = {
             />
         </div>
     ),
-    "inputText": ({title, form}) =>(
+    "inputText": ({title, form, inputName}) =>(
         <div  className='flex flex-col items-start'>
             <h2 className='mb-4'>{title}</h2>
             <Controller
-                name="jobTitle"
+                name={inputName}
                 control={form.control}
                 render={({field})=> {
                     return <InputText
@@ -44,13 +44,13 @@ export const questionComponents = {
             />
         </div>
     ),
-    "inputRadio": ({ options, form, title}) => (
+    "inputRadio": ({ options, form, title, inputName}) => (
         <div>
             <h2 className='mb-4'>{title}</h2>
             {options.map((option, i)=>{
                 return<div className='flex flex-row' key={option[i]}>
                     <Controller
-                    name="creditCardType"
+                    name={inputName}
                     control={form.control}
                     render={({field})=> {
                         return <RadioButton
@@ -58,6 +58,7 @@ export const questionComponents = {
                         name={field.name}
                         onChange={field.onChange}
                         value={option}
+                        checked={option == field.value}
                         />
                     }}
                 />

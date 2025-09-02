@@ -39,7 +39,7 @@
         "title": "What type of credit card are you interested in?",
         "image": "",
         "parragraph": "lorem ipsum...",
-        "inputName": "jobTitle"
+        "inputName": "creditCardType"
     },
     {
         "id": 2,
@@ -52,7 +52,7 @@
         "title": "Highest level of education completed?",
         "image": "",
         "parragraph": "lorem ipsum...",
-        "inputName": "jobTitle"
+        "inputName": "education"
     },
     {
         "id": 3,
@@ -64,7 +64,7 @@
         "title": "Are you currently employed?",
         "image": "",
         "parragraph": "lorem ipsum...",
-        "inputName": "jobTitle"
+        "inputName": "employed"
     },
     {
         "id": 4,
@@ -92,6 +92,7 @@
         ],
         "title": "What's your preffered method of contact?",
         "image": "",
-        "parragraph": "lorem ipsum..."
+        "parragraph": "lorem ipsum...",
+        "inputName": "methodOfContact"
     }
 ]
