@@ -23,12 +23,19 @@ const SlideContainer = () => {
     },
   })
   return (
-    <div>
-        <form onSubmit={handleSubmit((data) => console.log(data))} action="submit">
+    <div className='flex flex-row align-center w-screen h-screen'>
+      <div className='flex justify-center align-center w-1/2'>
+        <h1>left side</h1>
+      </div>
+    <div className='flex justify-center items-center w-1/2'>
+        <form className='w-1/2' onSubmit={handleSubmit((data) => console.log(data))} action="submit">
             <SlideTemplate question={questions[currentIndex]} form={{control, handleSubmit, getValues, setValue, watch}}/>
-            <button onClick={()=> setCurrentIndex(currentIndex + 1)}>Next</button>
-            <button type='submit'>Check Values</button>
+            <div className='flex flex-col gap-3'>
+              <button className='text-white bg-blue-900' onClick={()=> setCurrentIndex(currentIndex + 1)}>Next</button>
+              <button className='text-white bg-blue-900' type='submit'>Check Values</button>
+            </div>
         </form>
+    </div>
     </div>
   )
 }

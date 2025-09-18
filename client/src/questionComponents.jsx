@@ -28,12 +28,13 @@ export const questionComponents = {
     ),
     "inputText": ({title, form, inputName}) =>(
         <div  className='flex flex-col items-start'>
-            <h2 className='mb-4'>{title}</h2>
+            <h2 className='mb-2'>{title}</h2>
             <Controller
                 name={inputName}
                 control={form.control}
                 render={({field})=> {
                     return <InputText
+                        className='w-full'
                         placeholder='Job Title'
                         id='jobTitle'
                         name={field.name}
@@ -46,7 +47,7 @@ export const questionComponents = {
     ),
     "inputRadio": ({ options, form, title, inputName}) => (
         <div>
-            <h2 className='mb-4'>{title}</h2>
+            <h2 className='mb-2'>{title}</h2>
             {options.map((option, i)=>{
                 return<div className='flex flex-row' key={option[i]}>
                     <Controller
@@ -70,16 +71,17 @@ export const questionComponents = {
     ),
     "contactInfo": ({title, form, contactFields }) => (
   <div>
-    <h2 className='mb-4'>{title}</h2>
+    <h2 className='mb-4 text-3xl'>{title}</h2>
     {contactFields.map((input) => {
       if (input.type === "inputNumber") {
         return (
-            <div className="flex flex-col items-start" key={input.inputName}>
+            <div className="flex flex-col items-start mb-4" key={input.inputName}>
                 <Controller
                 name={input.inputName}
                 control={form.control}
                 render={({ field }) => (
                     <InputNumber
+                    className='w-full'
                     placeholder={input.title}
                     id={field.name}
                     name={field.name}
@@ -94,12 +96,13 @@ export const questionComponents = {
         )
       } else {
         return (
-            <div className="flex flex-col items-start" key={input.inputName}>
+            <div className="flex flex-col items-start mb-4" key={input.inputName}>
                 <Controller
                 name={input.inputName}
                 control={form.control}
                 render={({ field }) => (
                     <InputText
+                    className='w-full bg-red'
                     placeholder={input.title}
                     id={field.name}
                     name={field.name}
