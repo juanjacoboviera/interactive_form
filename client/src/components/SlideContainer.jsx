@@ -24,10 +24,10 @@ const SlideContainer = () => {
   })
   return (
     <div className='flex flex-row align-center w-screen h-screen'>
-      <div className='flex justify-center align-center w-1/2'>
+      <div className='flex justify-center align-center w-1/2 bg-blue-900'>
         <h1>left side</h1>
       </div>
-    <div className='flex justify-center items-center w-1/2'>
+    <div className='flex justify-center items-center w-1/2 bg-[#f4f4f4]'>
         <form className='w-1/2' onSubmit={handleSubmit((data) => console.log(data))} action="submit">
             <SlideTemplate question={questions[currentIndex]} form={{control, handleSubmit, getValues, setValue, watch}}/>
             <div className='flex flex-col gap-3'>
