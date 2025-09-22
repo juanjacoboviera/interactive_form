@@ -9,22 +9,26 @@
             {
                 "inputName": "firstName",
                 "type": "inputText",
-                "title": "First Name"
+                "title": "First Name",
+                "id": 0
             },
             {
                 "inputName": "lastName",
                 "type": "inputText",
-                "title": "Last Name"
+                "title": "Last Name",
+                "id": 1
             },
             {
                 "inputName": "phoneNumber",
                 "type": "inputNumber",
-                "title": "Phone Number"
+                "title": "Phone Number",
+                "id": 2
             },
             {
                 "inputName": "email",
                 "type": "inputText",
-                "title": "Email"
+                "title": "Email",
+                "id": 3
             }
         ]
     },
