@@ -2,7 +2,6 @@ import { InputText} from 'primereact/inputtext';
 import { Slider } from 'primereact/slider';        
 import { RadioButton } from 'primereact/radiobutton';
 import { InputNumber } from 'primereact/inputnumber';
-        
 import {Controller} from "react-hook-form"
 
 export const questionComponents = {

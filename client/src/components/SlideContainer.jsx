@@ -4,6 +4,7 @@ import SlideTemplate from '../components/SlideTemplate'
 import {useForm} from "react-hook-form"
 
 const SlideContainer = () => {
+    const [hideContainer, setHideContainer] = useState(false)
     const [currentIndex, setCurrentIndex] = useState(0)
     const [isTriggered, setTriggered] = useState(false);
      const { control, handleSubmit, getValues, setValue, watch, trigger, formState: {errors}, clearErrors } = useForm({
@@ -49,16 +50,17 @@ useEffect(() => {
 }, [formValues, currentIndex, errors, clearErrors]);
 
   return (
-    <div className='flex flex-row align-center w-screen h-screen'>
-      <div className='flex justify-center align-center w-1/2 bg-blue-900'>
+    <div className='flex flex-row align-center w-screen h-screen '>
+      <div className={`${hideContainer == true ? "left-container-shrink " : "" }flex justify-center align-center left-container bg-blue-900`}>
         <h1>left side</h1>
       </div>
-    <div className='flex justify-center items-center w-1/2 bg-[#f4f4f4]'>
+    <div className={`${hideContainer == true ? "right-container-expand  " : ""} flex justify-center relative items-center right-container bg-[#f4f4f4]`}>
         <form className='w-1/2' onSubmit={handleSubmit((data) => console.log(data))} action="submit">
             <SlideTemplate question={questions[currentIndex]} form={{control, handleSubmit, getValues, setValue, watch, errors, clearErrors}}/>
             <div className='flex flex-col gap-3'>
               <button type='button' className='text-white bg-blue-900' onClick={handleNext}>Next</button>
               <button className='text-white bg-blue-900' type='submit'>Check Values</button>
+              <button className='text-white bg-blue-900 w-28 h-28 rounded-full absolute top-[40%] -left-15  ' onClick={()=> setHideContainer(prev => !prev)} type='button'>H</button>
             </div>
         </form>
     </div>
