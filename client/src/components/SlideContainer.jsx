@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import questions from "../questions.json"
 import SlideTemplate from '../components/SlideTemplate'
 import {useForm} from "react-hook-form"
+import Stepper from './Stepper'
 
 const SlideContainer = () => {
     const [hideContainer, setHideContainer] = useState(false)
@@ -54,7 +55,8 @@ useEffect(() => {
       <div className={`${hideContainer == true ? "left-container-shrink " : "" }flex justify-center align-center left-container bg-blue-900`}>
         <h1>left side</h1>
       </div>
-    <div className={`${hideContainer == true ? "right-container-expand  " : ""} flex justify-center relative items-center right-container bg-[#f4f4f4]`}>
+    <div className={`${hideContainer == true ? "right-container-expand  " : ""} flex flex-col justify-center relative items-center right-container bg-[#f4f4f4]`}>
+        <Stepper currentIndex={currentIndex} questions={questions} />
         <form className='w-1/2' onSubmit={handleSubmit((data) => console.log(data))} action="submit">
             <SlideTemplate question={questions[currentIndex]} form={{control, handleSubmit, getValues, setValue, watch, errors, clearErrors}}/>
             <div className='flex flex-col gap-3'>
